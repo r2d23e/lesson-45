@@ -17,20 +17,38 @@ let Masiv = [
 
     },
 ]
-
+//-------------------------------//
+let nm;
 let ages = []
+
+for (let item of Masiv) {
+    item.income = item.age + 200
+    if (item.name == "Saidbek") {
+        nm = item
+    }
+    if (item.age > +20) {
+        ages.push(item)
+    }
+}
+console.log(ages);
+console.log(nm);
+//-------------------------------//
+
 for (let item of Masiv) {
     if (item.age >= 20) {
         ages.push(item)
     }
 }
-let filt = Masiv.filter(item => item.age >= 20)
-for (let item of Masiv) {
-    item.income = item.age + 200
-}
+//-------------------------------//
+let find_el = Masiv.find(item => item.name == "Saidbek")
 
+console.log(find_el);
+//-------------------------------//
+let filt = Masiv.filter(item => item.age >= 20)
 console.log(filt);
-console.log(ages);
+//-------------------------------//
+
+
 
 
 
